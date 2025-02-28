@@ -9,16 +9,18 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
 
-      <Routes>
-        <Route path="/" element={<Products />} />
-        <Route path="cart" element={<Cart />} />
-        <Route path="product/:id" element={<Product />} />
-      </Routes>
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Products />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="product/:id" element={<Product />} />
+        </Routes>
+      </div>
 
-      <Footer />
+      <Footer className="flex justify-center items-center py-4 mt-auto" />
     </div>
   );
 }
